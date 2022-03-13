@@ -16,8 +16,8 @@ class AlienFleet:
 
     # alien_images = [alien_images0, alien_images1, alien_images2]
     
-    alien_images = [[pg.transform.rotozoom(pg.image.load(f'images/alien__{m}{n}.png'), 0, 0.5) for n in range(2)] for m in range(3)]
-    ufo_imgs = [pg.transform.rotozoom(pg.image.load(f'images/ufo__{n}.png'), 0, 0.5) for n in range(2)]
+    alien_images = [[pg.transform.rotozoom(pg.image.load(f'images/img{m}{n}.png'), 0, 0.5) for n in range(2)] for m in range(3)]
+    ufo_imgs = [pg.transform.rotozoom(pg.image.load(f'images/UFO{n}.png'), 0, 0.5) for n in range(2)]
     alien_images.append(ufo_imgs)
     alien_points = [40, 20, 10, 100]
 
@@ -147,7 +147,7 @@ class Alien(Sprite):
         self.rect.x, self.rect.y = self.ul.x, self.ul.y
 
 
-    def draw(self):  
+    def draw(self):
       image = self.timer.image()
       rect = image.get_rect()
       rect.x, rect.y = self.rect.x, self.rect.y
