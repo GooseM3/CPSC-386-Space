@@ -1,2 +1,1 @@
-# CPSC 386 Space
- 
+# Space Invaders remake using Pygame for CPSC 386
